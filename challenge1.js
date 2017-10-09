@@ -104,3 +104,43 @@ function TheFizzBuzz (number){
   }
   return valueOf number;
 }
+
+
+//Javascript Hi/Lo Game
+
+function guessNumber(number, tries) {
+    guess = prompt("Guess a number between 1 and 100");
+    if(!guess) {
+        return console.log("Wow fine leave. *flips hair*");
+    } else {
+        guess = +guess;
+    }
+    if(guess === number) {
+        return console.log("You got it! The number was " + number);
+    } else if(guess > 100 || guess <= 0) {
+        console.log("Number must be between 1 and 100");
+    } else {
+        var miss = guess > number ? " high! " : " low! ";
+        console.log("Your guess of " + guess + " is too" + miss);
+    }
+  guessNumber(number)
+}
+
+
+// Goal: Reverse a given arg.
+
+function reverseArg(str, str2) {
+  if (str === null) {
+    console.log("You failed nerd - invalid args")
+  } else {
+    str2.split("").reverse("").join("");
+    return str + " " + str2
+  }
+}
+
+
+function reverse(words) {
+  console.log ("Word reversed")
+  return words.split("").reverse("");
+
+}
